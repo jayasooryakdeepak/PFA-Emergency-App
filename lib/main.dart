@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pfa_emergency_app/core/colors/colors.dart';
+import 'package:pfa_emergency_app/presentation/main_page/screen_main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -7,24 +9,22 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(),
+          primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: backgroundColor,
+          textTheme: const TextTheme(
+            bodyLarge: TextStyle(
+              color: textColor,
+            ),
+            bodyMedium: TextStyle(
+              color: textColor,
+            ),
+          )),
+      home: ScreenMainPage(),
     );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
