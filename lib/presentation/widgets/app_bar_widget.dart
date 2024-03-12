@@ -8,14 +8,16 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        boxShadow: [
+      decoration: BoxDecoration(
+        color: Colors.grey[300],
+        boxShadow: const [
           BoxShadow(
-            color: appbarColor,
-            blurRadius: 4,
-          )
+            color: Color.fromARGB(255, 158, 158, 158),
+            offset: Offset(1.0, 1.0),
+            spreadRadius: 1.0,
+          ),
         ],
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(10),
         ),
       ),
