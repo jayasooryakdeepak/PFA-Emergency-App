@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pfa_emergency_app/core/colors/colors.dart';
 import 'package:pfa_emergency_app/core/constants.dart';
 
 class AppBarWidget extends StatelessWidget {
@@ -7,7 +8,18 @@ class AppBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blue,
+      decoration: const BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: appbarColor,
+            blurRadius: 4,
+          )
+        ],
+        borderRadius: BorderRadius.all(
+          Radius.circular(10),
+        ),
+      ),
+      //color: Colors.blue,
       child: const Padding(
         padding: EdgeInsets.only(top: 10),
         child: Column(
