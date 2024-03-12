@@ -9,20 +9,20 @@ class ScreenHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(
-        preferredSize: Size.fromHeight(80),
+        preferredSize: Size.fromHeight(100),
         child: AppBarWidget(),
       ),
       body: ListView(
         children: const [
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              kWidthapp,
-              Icon(Icons.location_on_outlined),
+              kHeightuser,
               Text(
-                'Kochi,Kerala',
-              )
+                'Emergency Services',
+              ),
             ],
-          )
+          ),
         ],
       ),
     );

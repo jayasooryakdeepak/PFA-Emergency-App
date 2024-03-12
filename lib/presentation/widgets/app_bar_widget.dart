@@ -6,25 +6,37 @@ class AppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: 10),
-      child: Row(
-        children: [
-          kWidthapp,
-          Text(
-            'Welcome Unni,',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold
+    return Container(
+      color: Colors.blue,
+      child: const Padding(
+        padding: EdgeInsets.only(top: 10),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                kWidthapp,
+                Text(
+                  'Welcome Unni,',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Spacer(),
+                Icon(
+                  Icons.supervised_user_circle,
+                  size: 50,
+                ),
+              ],
             ),
-          ),
-          Spacer(),
-          Icon(
-            Icons.supervised_user_circle,
-            size: 50,
-          ),
-          kWidthuser,
-        ],
+            Row(
+              children: [
+                kWidthapp,
+                Icon(Icons.location_on_outlined),
+                Text(
+                  'Kochi,Kerala',
+                )
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
