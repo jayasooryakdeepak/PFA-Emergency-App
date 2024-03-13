@@ -5,14 +5,23 @@ class CardWidget extends StatelessWidget {
   final String title;
   final IconData icon;
   final String? imageUrl;
-  const CardWidget(
-      {super.key, required this.title, required this.icon, this.imageUrl});
+  final Widget widget;
+  const CardWidget({
+    super.key,
+    required this.title,
+    required this.icon,
+    this.imageUrl,
+    required this.widget,
+  });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('clicked');
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => widget),
+        );
       },
       child: Container(
         decoration: const BoxDecoration(

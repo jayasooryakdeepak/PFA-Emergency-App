@@ -5,9 +5,11 @@ class ScreenAmbulance extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Text(
-        'Ambulance',
+    return const SafeArea(
+      child: Scaffold(
+        body: Text(
+          'Ambulance',
+        ),
       ),
     );
   }
