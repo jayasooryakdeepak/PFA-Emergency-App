@@ -36,6 +36,7 @@ class ScreenHome extends StatelessWidget {
               CardWidget(
                 title: 'Fire & Safety',
                 icon: Icons.local_fire_department,
+                imageUrl: 'lib/presentation/home/assets/icon/fire-truck.gif',
               ),
             ],
           ),
@@ -46,10 +47,12 @@ class ScreenHome extends StatelessWidget {
               CardWidget(
                 title: 'Accident',
                 icon: Icons.local_police,
+                imageUrl: 'lib/presentation/home/assets/icon/car-crash.gif',
               ),
               CardWidget(
                 title: 'Police',
                 icon: Icons.local_police,
+                imageUrl: 'lib/presentation/home/assets/icon/police-car.gif',
               ),
             ],
           ),
