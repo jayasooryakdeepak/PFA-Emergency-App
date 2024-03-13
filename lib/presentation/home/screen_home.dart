@@ -6,7 +6,6 @@ import 'package:pfa_app/presentation/police/screen_police.dart';
 import 'package:pfa_app/presentation/widgets/app_bar_widget.dart';
 import 'package:pfa_app/presentation/widgets/card_widget.dart';
 
-
 class ScreenHome extends StatelessWidget {
   const ScreenHome({super.key});
 
@@ -45,7 +44,9 @@ class ScreenHome extends StatelessWidget {
               ),
             ],
           ),
-          kHeightuser,
+          SizedBox(
+            height: 80,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
@@ -68,4 +69,3 @@ class ScreenHome extends StatelessWidget {
     );
   }
 }
-
