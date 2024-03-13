@@ -31,6 +31,7 @@ class ScreenHome extends StatelessWidget {
               CardWidget(
                 title: 'Health Care',
                 icon: Icons.local_hospital,
+                imageUrl: 'lib/presentation/home/assets/icon/ambulance.gif',
               ),
               CardWidget(
                 title: 'Fire & Safety',
@@ -57,3 +58,4 @@ class ScreenHome extends StatelessWidget {
     );
   }
 }
+

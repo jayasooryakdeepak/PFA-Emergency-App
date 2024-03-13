@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:pfa_app/core/colors/colors.dart';
 
-
 class CardWidget extends StatelessWidget {
   final String title;
   final IconData icon;
-  const CardWidget({super.key, required this.title, required this.icon});
+  final String? imageUrl;
+  const CardWidget(
+      {super.key, required this.title, required this.icon, this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print('clics');
+        print('clicked');
       },
       child: Container(
         decoration: const BoxDecoration(
@@ -29,10 +30,16 @@ class CardWidget extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Icon(
-              icon,
-              size: 150,
-            ),
+            imageUrl != null
+                ? Image.asset(
+                    imageUrl!,
+                    height: 150,
+                    width: 150,
+                  )
+                : Icon(
+                    icon,
+                    size: 150,
+                  ),
             Text(title),
           ],
         ),
