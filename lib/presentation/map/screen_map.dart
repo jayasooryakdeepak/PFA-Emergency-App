@@ -9,18 +9,30 @@ class ScreenMaps extends StatefulWidget {
 }
 
 class _ScreenMapsState extends State<ScreenMaps> {
+
+  static const LatLng sourceLocation = LatLng(9.9707186, 76.3420201);
+  static const LatLng Destination = LatLng(9.9707186, 76.3420201);
+
+
   static const _initialCameraPosition = CameraPosition(
-    target: LatLng(9.9707186,76.3420201),
+    target: sourceLocation,
     zoom: 11.5,
   );
 
+
+
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: GoogleMap(
         initialCameraPosition: _initialCameraPosition,
+        markers: {
+          Marker(
+          markerId: MarkerId("Source"),
+          position: sourceLocation,
+        ),
+        }
       ),
     );
   }
 }
-
