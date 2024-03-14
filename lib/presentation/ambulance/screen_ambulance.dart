@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:pfa_app/presentation/fire/screen_fire.dart';
 import 'package:pfa_app/presentation/widgets/phone_card_Widget.dart';
 import 'package:pfa_app/presentation/widgets/service_card_widget.dart';
 
@@ -44,40 +45,88 @@ class ScreenAmbulance extends StatelessWidget {
               GridView.count(
                 shrinkWrap: true,
                 crossAxisCount: 2,
-                children: const [
+                children: [
                   ServiceCardWidget(
                     icon: Icons.local_hospital,
                     heading: 'Emergency Care',
                     subtext: '24/7 emergency care for all your medical needs.',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ScreenFire(),
+                        ),
+                      );
+                    },
                   ),
                   ServiceCardWidget(
                     icon: Icons.local_pharmacy,
                     heading: 'Pharmacy',
                     subtext: 'A wide range of medications and over-the-counter.',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ScreenFire() ,
+                        ),
+                      );
+                    },
                   ),
                   ServiceCardWidget(
                     icon: Icons.local_dining,
                     heading: 'Cafeteria',
                     subtext:
                         'A variety of food and beverage options to choose from.',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ScreenFire() ,
+                        ),
+                      );
+                    },
                   ),
                   ServiceCardWidget(
                     icon: Icons.local_laundry_service,
                     heading: 'Laundry',
                     subtext:
                         'Convenient laundry services for your clothes and linens.',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ScreenFire(),
+                        ),
+                      );
+                    },
                   ),
                   ServiceCardWidget(
                     icon: Icons.local_dining,
                     heading: 'Cafeteria',
                     subtext:
                         'A variety of food and beverage options to choose from.',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ScreenFire() ,
+                        ),
+                      );
+                    },
                   ),
                   ServiceCardWidget(
                     icon: Icons.local_laundry_service,
                     heading: 'Laundry',
                     subtext:
                         'Convenient laundry services for your clothes and linens.',
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ScreenFire(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
