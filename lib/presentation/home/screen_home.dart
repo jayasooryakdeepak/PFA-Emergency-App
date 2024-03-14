@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pfa_app/core/constants.dart';
 import 'package:pfa_app/presentation/ambulance/screen_ambulance.dart';
 import 'package:pfa_app/presentation/fire/screen_fire.dart';
+import 'package:pfa_app/presentation/map/screen_map.dart';
 import 'package:pfa_app/presentation/police/screen_police.dart';
 import 'package:pfa_app/presentation/widgets/app_bar_widget.dart';
 import 'package:pfa_app/presentation/widgets/card_widget.dart';
@@ -54,7 +55,7 @@ class ScreenHome extends StatelessWidget {
                 title: 'Accident',
                 icon: Icons.local_police,
                 imageUrl: 'lib/presentation/home/assets/icon/car-crash.gif',
-                widget: ScreenAmbulance(),
+                widget: ScreenMaps(),
               ),
               CardWidget(
                 title: 'Police',
