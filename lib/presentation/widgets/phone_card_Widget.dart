@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pfa_app/core/colors/colors.dart';
+import 'package:pfa_app/core/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PhoneCardWidget extends StatelessWidget {
@@ -16,9 +18,9 @@ class PhoneCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
+      height: kPhoneCardWidgetHeight,
       decoration: BoxDecoration(
-        color: Color.fromARGB(255, 243, 193, 193),
+        color: PhoneCardWidgetColor,
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
@@ -31,13 +33,7 @@ class PhoneCardWidget extends StatelessWidget {
       ),
       child: Row(
         children: [
-          const SizedBox(width: 10),
-          const Icon(
-            Icons.phone,
-            size: 30,
-            color: Colors.blue,
-          ),
-          const SizedBox(width: 10),
+          kWidthapp,
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -60,6 +56,13 @@ class PhoneCardWidget extends StatelessWidget {
               ],
             ),
           ),
+          Text(
+                  phoneNumber,
+                  style: const TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
           IconButton(
             onPressed: () {
               launchUrl(Uri.parse('tel:$phoneNumber'));
@@ -69,9 +72,11 @@ class PhoneCardWidget extends StatelessWidget {
               color: Colors.green,
             ),
           ),
-          const SizedBox(width: 10),
+          kWidthapp,
         ],
+        
       ),
+      
     );
   }
 }

@@ -22,10 +22,18 @@ class ScreenAmbulance extends StatelessWidget {
         body: Column(
           children: [
             const PhoneCardWidget(
-              phoneNumber: '0123456789',
+              phoneNumber: '9110',
               text1: 'Call for an Ambulance',
               text2: '24/7 emergency care',
             ),
+            // SizedBox(
+            //   height: 10,
+            // ),
+            // const PhoneCardWidget(
+            //   phoneNumber: '9110',
+            //   text1: 'Call for an Ambulance',
+            //   text2: '24/7 emergency care',
+            // ),
             GridView.count(
               shrinkWrap: true,
               crossAxisCount: 2,
