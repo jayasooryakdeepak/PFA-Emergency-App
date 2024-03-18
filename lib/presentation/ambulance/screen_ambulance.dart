@@ -60,9 +60,9 @@ class ScreenAmbulance extends StatelessWidget {
                     },
                   ),
                   ServiceCardWidget(
-                    icon: Icons.local_pharmacy,
-                    heading: 'Pharmacy',
-                    subtext: 'A wide range of medications and over-the-counter.',
+                    icon: Icons.airplanemode_on,
+                    heading: 'Air Ambulance',
+                    subtext: 'Schedule Air Ambulance Fast and easy',
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -73,10 +73,10 @@ class ScreenAmbulance extends StatelessWidget {
                     },
                   ),
                   ServiceCardWidget(
-                    icon: Icons.local_dining,
-                    heading: 'Cafeteria',
+                    icon: Icons.fire_truck,
+                    heading: 'Bulk Ambulance',
                     subtext:
-                        'A variety of food and beverage options to choose from.',
+                        'For emergency multiple ambulance needs',
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -87,10 +87,10 @@ class ScreenAmbulance extends StatelessWidget {
                     },
                   ),
                   ServiceCardWidget(
-                    icon: Icons.local_laundry_service,
-                    heading: 'Laundry',
+                    icon: Icons.car_rental,
+                    heading: 'Rent Ambulance',
                     subtext:
-                        'Convenient laundry services for your clothes and linens.',
+                        'For Events and Travel',
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -101,10 +101,10 @@ class ScreenAmbulance extends StatelessWidget {
                     },
                   ),
                   ServiceCardWidget(
-                    icon: Icons.local_dining,
-                    heading: 'Cafeteria',
+                    icon: Icons.woman,
+                    heading: 'Pink Ambulance',
                     subtext:
-                        'A variety of food and beverage options to choose from.',
+                        'Lady Drivers and staffs ',
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -115,10 +115,10 @@ class ScreenAmbulance extends StatelessWidget {
                     },
                   ),
                   ServiceCardWidget(
-                    icon: Icons.local_laundry_service,
-                    heading: 'Laundry',
+                    icon: Icons.warning_rounded,
+                    heading: 'Animal Ambulance',
                     subtext:
-                        'Convenient laundry services for your clothes and linens.',
+                        'For transporting animals',
                     onPressed: () {
                       Navigator.push(
                         context,
