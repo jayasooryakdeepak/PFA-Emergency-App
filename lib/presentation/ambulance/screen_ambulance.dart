@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:pfa_app/presentation/ambulance/screen_form.dart';
 import 'package:pfa_app/presentation/fire/screen_fire.dart';
 import 'package:pfa_app/presentation/widgets/phone_card_Widget.dart';
 import 'package:pfa_app/presentation/widgets/service_card_widget.dart';
@@ -54,7 +55,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire(),
+                          builder: (context) => const AmbuForm(),
                         ),
                       );
                     },

@@ -58,7 +58,7 @@ class _ScreenMapsState extends State<ScreenMaps> {
           Polyline(
             polylineId: PolylineId("route"),
             points: polylineCoordinates,
-            color: Colors.black,
+            color: Colors.green,
           ),
         },
         markers: {
@@ -66,9 +66,10 @@ class _ScreenMapsState extends State<ScreenMaps> {
             markerId: MarkerId("Source"),
             position: sourceLocation,
           ),
-          const Marker(
+          Marker(
             markerId: MarkerId("Destination"),
             position: Destination,
+            icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan)
           ),
         },
       ),
