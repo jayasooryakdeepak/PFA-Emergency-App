@@ -59,6 +59,8 @@ flutter:
     - lib/presentation/home/assets/icon/ambulance.gif
     - lib/presentation/home/assets/icon/police-car.gif
     - lib/presentation/home/assets/icon/car-crash.gif
+    - lib/presentation/fire/assets/fire.gif
+    - lib/presentation/fire/assets/fire-extinguisher.gif
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
