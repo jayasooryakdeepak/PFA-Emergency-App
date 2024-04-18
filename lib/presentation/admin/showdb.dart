@@ -67,6 +67,13 @@ class _ShowReqState extends State<ShowReq> {
                                   fontWeight: FontWeight.bold),
                             ),
                             Text(
+                              "Coordinates :" + ds["Coordinates"],
+                              style: const TextStyle(
+                                  color: Color.fromARGB(255, 32, 126, 19),
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
                               "Landmark :" + ds["Landmark"],
                               style: const TextStyle(
                                   color: Color.fromARGB(255, 255, 115, 0),
