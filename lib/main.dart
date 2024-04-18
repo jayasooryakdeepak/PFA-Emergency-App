@@ -2,7 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pfa_app/core/colors/colors.dart';
-import 'package:pfa_app/infrastructure/splash_screen/splash_screen.dart';
+import 'package:pfa_app/presentation/widgets/splash_screen.dart';
 import 'package:pfa_app/presentation/auth/login_page.dart';
 import 'package:pfa_app/presentation/auth/sign_up_page.dart';
 import 'package:pfa_app/presentation/main_page/screen_main_page.dart';
