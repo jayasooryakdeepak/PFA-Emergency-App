@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-id("com.android.application")
+
 
 android {
     namespace "com.example.pfa_app"
