@@ -74,6 +74,10 @@ void initState() {
                 onPressed: () async {
                   int phoneno = int.parse(phonecontroller.text);
                   String Id = randomAlphaNumeric(10);
+                  String loc1 = randomNumeric(6);
+                  String loc2 = randomNumeric(6);
+                  String tm = randomBetween(6, 15).toString();
+
                   Map<String, dynamic> ServiceInfomap = {
                     "Name": namecontroller.text,
                     "Place": placecontroller.text,
@@ -81,14 +85,15 @@ void initState() {
                     "Request_Type":req,
                     "Service_Type":ser,
                     "Landmark": locationcontroller.text,
-                    "Phone": phoneno.toInt()
+                    "Phone": phoneno.toInt(),
+                    "Coordinates":'9.'+loc1+', 76.'+loc2
                   };
                   await DatabaseMethods()
                       .addServiceRequest(ServiceInfomap, Id)
                       .then(
                     (value) {
                       Fluttertoast.showToast(
-                          msg: "Employee Details Added Successfully",
+                          msg: "Help will Arrive in "+ tm +" minute",
                           toastLength: Toast.LENGTH_SHORT,
                           gravity: ToastGravity.CENTER,
                           timeInSecForIosWeb: 1,
