@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
           "Welcome To PFA Emergency App",
           style: TextStyle(
             color: Colors.red,
-            fontSize: 30,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),

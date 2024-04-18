@@ -58,8 +58,10 @@ class ScreenPolice extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>
-                              const AmbuForm(req_type: 'Emergency Assistance',ser_type: "Police",),
+                          builder: (context) => const AmbuForm(
+                            req_type: 'Emergency Assistance',
+                            ser_type: "Police",
+                          ),
                         ),
                       );
                     },
@@ -73,7 +75,10 @@ class ScreenPolice extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ScreenFire(),
+                          builder: (context) => AmbuForm(
+                            req_type: 'Report  Incident',
+                            ser_type: "Police",
+                          ),
                         ),
                       );
                     },
@@ -87,7 +92,10 @@ class ScreenPolice extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ScreenFire(),
+                          builder: (context) => AmbuForm(
+                            req_type: 'Location Sharing',
+                            ser_type: "Police",
+                          ),
                         ),
                       );
                     },
@@ -101,7 +109,10 @@ class ScreenPolice extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ScreenFire(),
+                          builder: (context) => AmbuForm(
+                            req_type: 'Crime Mapping',
+                            ser_type: "Police",
+                          ),
                         ),
                       );
                     },

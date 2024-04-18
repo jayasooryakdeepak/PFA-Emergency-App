@@ -7,7 +7,7 @@ import 'package:pfa_app/presentation/widgets/phone_card_Widget.dart';
 import 'package:pfa_app/presentation/widgets/service_card_widget.dart';
 
 class ScreenAmbulance extends StatelessWidget {
-   ScreenAmbulance({super.key});
+  ScreenAmbulance({super.key});
 
   String ser_type = "Ambulance";
 
@@ -36,9 +36,12 @@ class ScreenAmbulance extends StatelessWidget {
                   viewportFraction: 1.0,
                 ),
                 items: [
-                  Image.asset('lib/presentation/home/assets/icon/car-crash.gif'),
-                  Image.asset('lib/presentation/home/assets/icon/car-crash.gif'),
-                  Image.asset('lib/presentation/home/assets/icon/car-crash.gif'),
+                  Image.asset(
+                      'lib/presentation/home/assets/icon/car-crash.gif'),
+                  Image.asset(
+                      'lib/presentation/home/assets/icon/car-crash.gif'),
+                  Image.asset(
+                      'lib/presentation/home/assets/icon/car-crash.gif'),
                 ],
               ),
               const PhoneCardWidget(
@@ -58,7 +61,10 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => AmbuForm(req_type: 'Emergency Care',ser_type: ser_type,),
+                          builder: (context) => AmbuForm(
+                            req_type: 'Emergency Care',
+                            ser_type: ser_type,
+                          ),
                         ),
                       );
                     },
@@ -71,7 +77,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ShowReq() ,
+                          builder: (context) => ShowReq(),
                         ),
                       );
                     },
@@ -79,13 +85,15 @@ class ScreenAmbulance extends StatelessWidget {
                   ServiceCardWidget(
                     icon: Icons.fire_truck,
                     heading: 'Bulk Ambulance',
-                    subtext:
-                        'For emergency multiple ambulance needs',
+                    subtext: 'For emergency multiple ambulance needs',
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ScreenFire() ,
+                          builder: (context) => AmbuForm(
+                            req_type: 'Bulk Ambulance',
+                            ser_type: ser_type,
+                          ),
                         ),
                       );
                     },
@@ -93,13 +101,15 @@ class ScreenAmbulance extends StatelessWidget {
                   ServiceCardWidget(
                     icon: Icons.car_rental,
                     heading: 'Rent Ambulance',
-                    subtext:
-                        'For Events and Travel',
+                    subtext: 'For Events and Travel',
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ScreenFire(),
+                          builder: (context) => AmbuForm(
+                            req_type: 'Rent Ambulance',
+                            ser_type: ser_type,
+                          ),
                         ),
                       );
                     },
@@ -107,13 +117,15 @@ class ScreenAmbulance extends StatelessWidget {
                   ServiceCardWidget(
                     icon: Icons.woman,
                     heading: 'Pink Ambulance',
-                    subtext:
-                        'Lady Drivers and staffs ',
+                    subtext: 'Lady Drivers and staffs ',
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ScreenFire() ,
+                          builder: (context) => AmbuForm(
+                            req_type: 'Pink Ambulance',
+                            ser_type: ser_type,
+                          ),
                         ),
                       );
                     },
@@ -121,13 +133,15 @@ class ScreenAmbulance extends StatelessWidget {
                   ServiceCardWidget(
                     icon: Icons.warning_rounded,
                     heading: 'Animal Ambulance',
-                    subtext:
-                        'For transporting animals',
+                    subtext: 'For transporting animals',
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ScreenFire(),
+                          builder: (context) => AmbuForm(
+                            req_type: 'Animal Ambulance',
+                            ser_type: ser_type,
+                          ),
                         ),
                       );
                     },
@@ -141,4 +155,3 @@ class ScreenAmbulance extends StatelessWidget {
     );
   }
 }
-

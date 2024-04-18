@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pfa_app/presentation/admin/showdb.dart';
 
 class ScreenProfile extends StatelessWidget {
   const ScreenProfile({super.key});
@@ -6,9 +7,7 @@ class ScreenProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text(
-        'Profile',
-      ),
+      body: ShowReq()
     );
   }
 }
