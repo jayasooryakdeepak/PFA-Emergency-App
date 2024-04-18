@@ -6,7 +6,9 @@ import 'package:pfa_app/presentation/widgets/phone_card_Widget.dart';
 import 'package:pfa_app/presentation/widgets/service_card_widget.dart';
 
 class ScreenAmbulance extends StatelessWidget {
-  const ScreenAmbulance({super.key});
+   ScreenAmbulance({super.key});
+
+  String ser_type = "Ambulance";
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +57,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const AmbuForm(),
+                          builder: (context) => AmbuForm(req_type: 'Emergency Care',ser_type: ser_type,),
                         ),
                       );
                     },
@@ -68,7 +70,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire() ,
                         ),
                       );
                     },
@@ -82,7 +84,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire() ,
                         ),
                       );
                     },
@@ -96,7 +98,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire(),
+                          builder: (context) => ScreenFire(),
                         ),
                       );
                     },
@@ -110,7 +112,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire() ,
                         ),
                       );
                     },
@@ -124,7 +126,7 @@ class ScreenAmbulance extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire(),
+                          builder: (context) => ScreenFire(),
                         ),
                       );
                     },
@@ -138,3 +140,4 @@ class ScreenAmbulance extends StatelessWidget {
     );
   }
 }
+

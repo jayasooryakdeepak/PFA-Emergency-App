@@ -5,7 +5,9 @@ import 'package:pfa_app/presentation/widgets/phone_card_Widget.dart';
 import 'package:pfa_app/presentation/widgets/service_card_widget.dart';
 
 class ScreenFire extends StatelessWidget {
-  const ScreenFire({super.key});
+   ScreenFire({super.key});
+
+  String serv_type = "Fire";
 
 @override
   Widget build(BuildContext context) {
@@ -54,7 +56,7 @@ class ScreenFire extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const AmbuForm(),
+                          builder: (context) => const AmbuForm(req_type: 'Firefighting',ser_type: 'Fire',),
                         ),
                       );
                     },
@@ -67,7 +69,7 @@ class ScreenFire extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire() ,
                         ),
                       );
                     },
@@ -81,7 +83,7 @@ class ScreenFire extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire() ,
                         ),
                       );
                     },
@@ -95,7 +97,7 @@ class ScreenFire extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire(),
+                          builder: (context) => ScreenFire(),
                         ),
                       );
                     },
@@ -109,7 +111,7 @@ class ScreenFire extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire() ,
                         ),
                       );
                     },
@@ -123,7 +125,7 @@ class ScreenFire extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire(),
+                          builder: (context) => ScreenFire(),
                         ),
                       );
                     },

@@ -6,7 +6,9 @@ import 'package:pfa_app/presentation/widgets/phone_card_Widget.dart';
 import 'package:pfa_app/presentation/widgets/service_card_widget.dart';
 
 class ScreenPolice extends StatelessWidget {
-  const ScreenPolice({super.key});
+  ScreenPolice({super.key});
+
+  String ser_type = "Police";
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,8 @@ class ScreenPolice extends StatelessWidget {
                 items: [
                   Image.asset('lib/presentation/police/assets/police-car.gif'),
                   Image.asset('lib/presentation/police/assets/police.gif'),
-                  Image.asset('lib/presentation/police/assets/security-guard.gif'),
+                  Image.asset(
+                      'lib/presentation/police/assets/security-guard.gif'),
                 ],
               ),
               const PhoneCardWidget(
@@ -49,14 +52,14 @@ class ScreenPolice extends StatelessWidget {
                 children: [
                   ServiceCardWidget(
                     icon: Icons.local_hospital,
-
                     heading: 'Emergency Assistance',
                     subtext: '24/7 emergency Assistance',
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const AmbuForm(),
+                          builder: (context) =>
+                              const AmbuForm(req_type: 'Emergency Assistance',ser_type: "Police",),
                         ),
                       );
                     },
@@ -64,12 +67,13 @@ class ScreenPolice extends StatelessWidget {
                   ServiceCardWidget(
                     icon: Icons.local_police_outlined,
                     heading: 'Report  Incident',
-                    subtext: 'Report crimes including details like location and type of incident.',
+                    subtext:
+                        'Report crimes including details like location and type of incident.',
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire(),
                         ),
                       );
                     },
@@ -83,7 +87,7 @@ class ScreenPolice extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire() ,
+                          builder: (context) => ScreenFire(),
                         ),
                       );
                     },
@@ -97,12 +101,11 @@ class ScreenPolice extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ScreenFire(),
+                          builder: (context) => ScreenFire(),
                         ),
                       );
                     },
                   ),
-
                 ],
               ),
             ],

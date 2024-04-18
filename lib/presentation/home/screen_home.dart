@@ -18,7 +18,7 @@ class ScreenHome extends StatelessWidget {
         child: AppBarWidget(),
       ),
       body: ListView(
-        children: const [
+        children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

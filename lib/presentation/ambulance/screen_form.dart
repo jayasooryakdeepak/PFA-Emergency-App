@@ -7,7 +7,10 @@ import 'package:pfa_app/presentation/map/current_location_map.dart';
 import 'package:random_string/random_string.dart';
 
 class AmbuForm extends StatefulWidget {
-  const AmbuForm({super.key});
+  const AmbuForm({super.key,required this.req_type, required this.ser_type});
+
+  final String req_type;
+  final String ser_type;
 
   @override
   State<AmbuForm> createState() => _AmbuFormState();
@@ -18,8 +21,18 @@ class _AmbuFormState extends State<AmbuForm> {
   TextEditingController placecontroller = new TextEditingController();
   TextEditingController locationcontroller = new TextEditingController();
   TextEditingController phonecontroller = new TextEditingController();
+  
+  late String req;
+  late String ser;
 
   @override
+
+void initState() {
+    super.initState();
+    req = widget.req_type;
+    ser = widget.ser_type;
+  }
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -65,6 +78,8 @@ class _AmbuFormState extends State<AmbuForm> {
                     "Name": namecontroller.text,
                     "Place": placecontroller.text,
                     "Id":Id,
+                    "Request_Type":req,
+                    "Service_Type":ser,
                     "Landmark": locationcontroller.text,
                     "Phone": phoneno.toInt()
                   };
@@ -125,3 +140,4 @@ class _AmbuFormState extends State<AmbuForm> {
     );
   }
 }
+
