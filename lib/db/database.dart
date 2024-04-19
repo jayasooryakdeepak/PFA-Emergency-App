@@ -11,6 +11,17 @@ class DatabaseMethods {
         .set(ServiceInfomap);
   }
 
+  //CREATE
+  Future addAccident(
+      Map<String, dynamic> AccidentInfomap, String id) async {
+    return await FirebaseFirestore.instance
+        .collection("Accident_Report")
+        .doc(id)
+        .set(AccidentInfomap);
+  }
+
+  
+
 
   //READ
   Future<Stream<QuerySnapshot>> getServiceRequests() async {

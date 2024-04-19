@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:pfa_app/core/constants.dart';
+import 'package:pfa_app/presentation/widgets/acci.dart';
 
 class ScreenMaps extends StatefulWidget {
   const ScreenMaps({super.key});
@@ -66,13 +67,31 @@ class _ScreenMapsState extends State<ScreenMaps> {
             markerId: MarkerId("Source"),
             position: sourceLocation,
           ),
-          Marker(
-            markerId: MarkerId("Destination"),
-            position: Destination,
-            icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan)
-          ),
+          // Marker(
+          //   markerId: MarkerId("Destination"),
+          //   position: Destination,
+          //   icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueCyan)
+          // ),
         },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: ElevatedButton(
+        onPressed: () {
+          // Navigate to the report accident screen
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AcciForm(),
+            ),
+          );
+        },
+        child: Text(
+          'Report Accident',
+          style: TextStyle(color: Colors.red),
+        ),
       ),
     );
   }
 }
+
+
